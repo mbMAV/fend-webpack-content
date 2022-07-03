@@ -11,12 +11,12 @@ export function handleSubmit(event) {
     console.log(data)
     apiRequest('http://localhost:8083/meaningApi', data)
 
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8083/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
+    // console.log("::: Form Submitted :::")
+    // fetch('http://localhost:8083/test')
+    // .then(res => res.json())
+    // .then(function(res) {
+    //     document.getElementById('results').innerHTML = res.message
+    // })
 }
 
 
@@ -37,7 +37,8 @@ const apiRequest = async ( url = '', data)=>{
         const newData = await res.json();
         console.log(":::newData is here!:::");
         console.log(newData);
-        return newData;
+        const message = JSON.stringify(newData)
+        document.getElementById('results').innerHTML = message
     }
 
     catch(error) {
