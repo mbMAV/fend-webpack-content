@@ -7,9 +7,14 @@ export function handleSubmit(event) {
         text: formText
     }
 
-    Client.checkForName(formText)
+    if(Client.checkForName(data) == true) {
     console.log(data)
     apiRequest('http://localhost:8083/meaningApi', data)
+    } else {
+        console.log("No imput from user!")
+        return
+    }
+
 
     // console.log("::: Form Submitted :::")
     // fetch('http://localhost:8083/test')
@@ -35,7 +40,7 @@ const apiRequest = async ( url = '', data)=>{
 
     try {
         const newData = await res.json();
-        console.log(":::newData is here!:::");
+        console.log("::: newData is here! :::");
         console.log(newData);
         const message = JSON.stringify(newData)
         document.getElementById('results').innerHTML = message
