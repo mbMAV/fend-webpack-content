@@ -1,27 +1,39 @@
-# Webpack Express Example App
+# Project NLP Website
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+## Table of content
+*[General info](#general-info)
+*[Technologies](#technologies)
+*[Setup](#setup)
 
-If you want to follow along with the course, you will start from the master and switch to the appropriate numbered branches of this repo as needed. The branches are:
-- [0-initial-setup](https://github.com/udacity/fend-webpack-content/tree/0-initial-setup)
-- [1-install-webpack](https://github.com/udacity/fend-webpack-content/tree/1-install-webpack)
-- [2-add-webpack-entry](https://github.com/udacity/fend-webpack-content/tree/2-add-webpack-entry)
-- [3-webpack-output-and-loaders](https://github.com/udacity/fend-webpack-content/tree/3-webpack-output-and-loaders)
-- [4-webpack-plugins](https://github.com/udacity/fend-webpack-content/tree/4-webpack-plugins)
-- [5-webpack-mode](https://github.com/udacity/fend-webpack-content/tree/5-webpack-mode)
-- [6-webpack-for-convenience](https://github.com/udacity/fend-webpack-content/tree/6-webpack-for-convenience)
+## General info
 
-Each one is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step should also match to a git commit if you look at the history) which you can use as a checklist when setting up your own projects.
+Find it on GitHub: https://github.com/mbMAV/fend-webpack-content/tree/0-initial-setup
 
-## Get Up and Running
+This project is about build and run a website with modern webpack loaders and plugins.
+Using an natural language processing API and manipulate the HTML. Unit testing via Jest and and service worker are also required. The API key should not be visible on Client side.
+Css files need to be Sass before production.
 
-Fork this repo, then clone your forked repo down to your computer:
 
-```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
-```
+## Technologies
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8083, but you can of course edit that in index.js
+* Webpack 5
+* node.js
+* express
+* meaningcloud Sentiment Analysis 2.1
+* dotenv
+* Jest
+* workbox
+
+## Setup
+To run this project use:
+
+`$ npm install`
+
+`$ npm run build-dev`
+
+`$ npm run build-prod`
+`$ npm run start`
+
+For Jest unit test use:
+
+`$ npm run test`
